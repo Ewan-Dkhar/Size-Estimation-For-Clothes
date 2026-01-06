@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BodyScope</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Font Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            inter: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-100 p-6 md:p-10 font-inter">
+
+  <!-- Page Title -->
+  <h1 class="text-2xl md:text-3xl font-poppins font-semibold mb-6">
+    BodyScope
+  </h1>
+
+  <!-- Main Card -->
+  <div class="max-w-4xl bg-white rounded-3xl shadow-lg p-6 md:p-10">
+
+    <h2 class="text-2xl md:text-3xl font-poppins font-medium mb-8">
+      Body Ratio Analysis
+    </h2>
+
+    <!-- Upload Box -->
+    <div class="bg-gray-300 rounded-2xl p-8 md:p-12 text-center mb-8">
+      <p class="mb-6 text-gray-800 font-inter">
+        Drag & drop the image here or
+      </p>
+
+      <label class="inline-block border border-black px-5 py-2 rounded-md cursor-pointer mr-3 bg-white font-inter">
+        Choose File
+        <input type="file" id="fileInput" hidden />
+      </label>
+
+      <span id="fileName" class="text-sm text-gray-700 font-inter">
+        No File Chosen
+      </span>
+    </div>
+
+    <!-- Button -->
+    <button
+      id="estimateBtn"
+      class="bg-[#2b2525] text-white px-6 py-3 rounded-md hover:opacity-90 transition font-inter"
+    >
+      Estimate Body Ratio
+    </button>
+
+    <!-- Loader -->
+    <div
+      id="loader"
+      class="hidden mt-6 w-10 h-10 border-4 border-gray-300 border-t-[#2b2525] rounded-full animate-spin"
+    ></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
