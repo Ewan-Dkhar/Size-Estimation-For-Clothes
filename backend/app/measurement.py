@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-def extract_features_from_keypoints(keypoints, image_height, image_width):
+def extract_features_from_keypoints(keypoints, image_height, image_width, person_height_input):
     # Standard Setup
     kps = np.squeeze(keypoints)
     
@@ -60,7 +60,7 @@ def extract_features_from_keypoints(keypoints, image_height, image_width):
     estimated_total_height_px = body_core_px / 0.82
     
     # using my height as of now, later this will we given be the user
-    assumed_real_height_cm = 170.25
+    assumed_real_height_cm = person_height_input
     
     scale_factor = assumed_real_height_cm / (estimated_total_height_px + 1e-6)
     

@@ -58,3 +58,8 @@ dist/
 # =========================
 # TensorFlow Lite models (optional)
 # Uncomment if models should N
+
+
+# =========================
+# Temporary file
+temp_images/
