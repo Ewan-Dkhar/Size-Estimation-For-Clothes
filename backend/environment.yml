@@ -1,0 +1,16 @@
+name: size-estimator-env
+channels:
+  - conda-forge
+dependencies:
+  - opencv
+  - numpy
+  - scikit-learn
+  - joblib
+  - pandas
+  - python=3.10
+  - pip
+  - pip:
+      - tensorflow
+      - fastapi
+      - uvicorn
+      - python-multipart
