@@ -80,7 +80,7 @@ These features are combined to form a body profile used for size classification.
 [Size Recommendation (S / M / L / XL)]
 ```
 
-## Environment Setup
+## ⚙️ Environment Setup
 
 This project uses a Conda virtual environment.
 
