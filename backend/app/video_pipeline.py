@@ -66,4 +66,7 @@ def estimate_clothing_size(video_path, person_height):
 
     message = f"Estimated Size: {final_prediction} (Confidence = {round(confidence, 2)}%)"
 
-    return message
+    return {
+        "size": final_prediction,
+        "confidence": round(confidence, 2)
+    }

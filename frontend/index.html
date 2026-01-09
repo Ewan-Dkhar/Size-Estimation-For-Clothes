@@ -41,33 +41,45 @@
     </h2>
 
     <!-- Upload Box -->
-    <div class="bg-gray-300 rounded-2xl p-8 md:p-12 text-center mb-8">
-      <p class="mb-6 text-gray-800 font-inter">
-        Drag & drop the image here or
-      </p>
+    <!-- <form method="post" enctype="multipart/form-data"> -->
+      <div class="bg-gray-300 rounded-2xl p-8 md:p-12 text-center mb-8">
+        <p class="mb-6 text-gray-800 font-inter">
+          Drag & drop the video here or
+        </p>
+  
+        <label class="inline-block border border-black px-5 py-2 rounded-md cursor-pointer mr-3 bg-white font-inter">
+          Choose File
+          <input type="file" id="fileInput" accept="fileInput/mp4" hidden />
+        </label>
+  
+        <span id="fileName" class="text-sm text-gray-700 font-inter">
+          No File Chosen
+        </span>
+      </div>
+  
+      <div>
+        <label for="heightInput" class="block mb-2">Height in <strong>cm</strong></label>
+        <input type="number" id="heightInput" name="height" class="border border-black mb-4 rounded py-2 pl-4 ">
+      </div>
 
-      <label class="inline-block border border-black px-5 py-2 rounded-md cursor-pointer mr-3 bg-white font-inter">
-        Choose File
-        <input type="file" id="fileInput" hidden />
-      </label>
-
-      <span id="fileName" class="text-sm text-gray-700 font-inter">
-        No File Chosen
-      </span>
-    </div>
+      <button
+        id="estimateBtn"
+        class="bg-[#2b2525] text-white px-6 py-3 rounded-md hover:opacity-90 transition font-inter"
+      >
+        Estimate Body Ratio
+      </button>
+    <!-- </form> -->
 
     <!-- Button -->
-    <button
-      id="estimateBtn"
-      class="bg-[#2b2525] text-white px-6 py-3 rounded-md hover:opacity-90 transition font-inter"
-    >
-      Estimate Body Ratio
-    </button>
 
     <!-- Loader -->
     <div
       id="loader"
       class="hidden mt-6 w-10 h-10 border-4 border-gray-300 border-t-[#2b2525] rounded-full animate-spin"
+    ></div>
+    <div
+      id="result"
+      class="hidden mt-6 w-full border-1 border-black rounded py-2 px-4"
     ></div>
 
   </div>
